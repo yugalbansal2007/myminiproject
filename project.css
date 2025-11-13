@@ -1,0 +1,31 @@
+body {
+    font-family: Arial;
+    background-color: rgb(50, 155, 190);
+    margin: 20px;
+}
+
+h1 {
+    color: rgb(63, 63, 207);
+}
+
+h2 {
+    color: rgb(213, 11, 11);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 3px 6px;
+    border: 1px solid black;
+}
+
+a:hover {
+    background-color: rgb(18, 222, 106);
+}
+
+pre {
+    background-color: #eee;
+    padding: 10px;
+    border: 1px solid #c51c1c;
+}

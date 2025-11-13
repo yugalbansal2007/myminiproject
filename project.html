@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yugal bansal| Mini Project</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+    <header>
+        <h1>yugal bansal</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome!</h2>
+        <p>This is my mini project which includes all the things like about me, education, skills, projects, and contact information.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>My name is <strong>yugal bansal</strong>. I am 17 years old. I like to play badminton, love video games, and driving.</p>
+        <img src="/Screenshot .jpeg" height="300px">
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p>I did my 10th from <strong>DAV Public School, fatehabad</strong> and 12th from <strong> delhi </strong>.</p>
+        <p>Currently, I am pursuing <strong>B.Tech in Computer Science and Engineering</strong> from <strong>Delhi Technological University</strong> (formerly Delhi College of Engineering).</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>C (Basic)</li>
+            <li>C++ (Basic)</li>
+            <li>HTML (Basic)</li>
+            <li>CSS (Basic)</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <h3>1. build calculator </h3>
+        <p><strong>Description:</strong> using c language and functions to build calculator</p>
+        <p><strong>Code:</strong></p>
+        <pre>#include <stdio.h>
+double add(double a, double b);
+double subtract(double a, double b);
+double multiply(double a, double b);
+double divide(double a, double b);
+
+int main() {
+    char operator;
+    double num1, num2, result;
+
+    printf("Enter an operator (+, -, *, /): ");
+    scanf("%c", &operator);
+
+    printf("Enter two numbers: ");
+    scanf("%lf %lf", &num1, &num2);
+
+    switch (operator) {
+        case '+':
+            result = add(num1, num2);
+            printf("Result: %.2lf + %.2lf = %.2lf\n", num1, num2, result);
+            break;
+
+        case '-':
+            result = subtract(num1, num2);
+            printf("Result: %.2lf - %.2lf = %.2lf\n", num1, num2, result);
+            break;
+
+        case '*':
+            result = multiply(num1, num2);
+            printf("Result: %.2lf * %.2lf = %.2lf\n", num1, num2, result);
+            break;
+
+        case '/':
+            if (num2 != 0)
+                result = divide(num1, num2);
+            else {
+                printf("Error! Division by zero.\n");
+                return 1;
+            }
+            printf("Result: %.2lf / %.2lf = %.2lf\n", num1, num2, result);
+            break;
+
+        default:
+            printf("Error! Invalid operator.\n");
+    }
+
+    return 0;
+}
+
+double add(double a, double b) {
+    return a + b;
+}
+
+double subtract(double a, double b) {
+    return a - b;
+}
+
+double multiply(double a, double b) {
+    return a * b;
+}
+
+double divide(double a, double b) {
+    return a / b;
+} <br><br><br><br>
+<h3> DEMO OUTPUT OF THE CALCULATOR</h3>
+<br>
+<img src="/cal output.png" width="700 px">
+
+        </pre>
+
+
+        <h3>2. Digital Clock in C</h3>
+        <p><strong>Description:</strong> Used header file &lt;unistd.h&gt; for the sleep function to show time updates every second.</p>
+        <p><strong>Code:</strong></p>
+        <pre>#include <stdio.h>
+#include <time.h>
+#include <stdbool.h>
+#include <unistd.h>//for sleep function
+
+int main() {
+
+    // DIGITAL CLOCK
+    time_t rawtime=0;//jan 1 1970 (epoch)
+    struct tm*pTime=NULL;
+    bool isrunning=true;
+    printf("DIGITAL CLOCK\n");
+    while(isrunning){
+        time(&rawtime);
+        pTime=localtime(&rawtime);
+        printf("\r%02d:%02d:%02d",(*pTime).tm_hour,(*pTime).tm_min,(*pTime).tm_sec);
+        //\r is to move back the cursor at the starting of the line
+        
+        sleep(1);
+
+    }
+
+    
+
+    return 0;
+}
+</pre>
+
+        <h3>5. Student Data using Struct</h3>
+        <p>Created a small C program to take and display student data using structures.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <p><strong>Mobile:</strong> 7988160152</p>
+        <p><strong>Email:</strong> yugalbansal2007@gmail.com</p>
+        <p><strong>College Email:</strong> yugalbansal_cse_25a06071@dtu.ac.in</p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/yugalbansal2007" target="_blank">github.com/yugalbansal2007</a></p>
+    </section>
+
+    <footer>
+        <p>©️ 2025 yugal bansal | Mini Project Portfolio</p>
+    </footer>
+
+</body>
+</html>
